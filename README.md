@@ -22,4 +22,4 @@ Você pode visualizar a versão ao vivo deste portfólio através do link abaixo
 
 ---
 **Deseja contratar um serviço freelancer ou bater um papo sobre tecnologia?**
-📫 [LinkedIn](linkedin.com/joaopedro-frontend/) | [GitHub](https://github.com/potter1v4)
+📫 [LinkedIn](https://www.linkedin.com/in/joãopedro-frontend/) | [GitHub](https://github.com/potter1v4)
