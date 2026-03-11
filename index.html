@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Potter | Portfólio Front-End</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+   <link rel="icon" type="image/x-icon" href="favicon.ico"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-color: #ffffff;
             --text-main: #1a1a1a;
             --text-secondary: #666666;
             --border-color: #eeeeee;
+            --whatsapp-color: #25d366;
+            --linkedin-color: #0077b5;
         }
 
         body {
@@ -28,11 +30,27 @@
             padding: 80px 20px;
         }
 
-        /* Cabeçalho Formal */
+        /* Cabeçalho com Foto de Perfil */
         header {
             margin-bottom: 60px;
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--border-color);
+            flex-shrink: 0;
+        }
+
+        .header-content {
+            flex-grow: 1;
         }
 
         h1 {
@@ -46,7 +64,7 @@
         .subtitle {
             font-size: 1.2rem;
             color: var(--text-secondary);
-            margin-top: 10px;
+            margin-top: 5px;
             font-weight: 300;
         }
 
@@ -75,7 +93,6 @@
             transform: translateY(-5px);
         }
 
-        /* Estilo da Imagem Real */
         .project-image-real {
             width: 300px;
             height: 180px;
@@ -83,7 +100,7 @@
             overflow: hidden;
             flex-shrink: 0;
             border: 1px solid var(--border-color);
-            background-color: #000; /* Fundo preto para imagens escuras */
+            background-color: #000;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -92,7 +109,7 @@
         .project-image-real img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Faz a imagem cobrir o quadrado sem distorcer */
+            object-fit: cover;
             display: block;
         }
 
@@ -111,7 +128,6 @@
             margin-bottom: 20px;
         }
 
-        /* Ícones de Tecnologia */
         .tech-stack {
             display: flex;
             gap: 15px;
@@ -151,15 +167,68 @@
             color: #fff;
         }
 
-        /* Responsividade para Celular */
+        /* Seção Vamos Trabalhar Juntos */
+        .contact-section {
+            margin-top: 80px;
+            padding: 60px 40px;
+            background-color: #f9f9f9;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn-contact {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s, opacity 0.2s;
+            color: #fff;
+        }
+
+        .btn-contact:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        .btn-linkedin { background-color: var(--linkedin-color); }
+        .btn-whatsapp { background-color: var(--whatsapp-color); }
+
+        .btn-contact img {
+            width: 20px;
+            height: 20px;
+            filter: brightness(0) invert(1); /* Deixa os ícones brancos */
+        }
+
+        /* Responsividade */
         @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+            }
             .project-card {
                 flex-direction: column;
             }
             .project-image-real {
                 width: 100%;
             }
-            .container {
+            .contact-section {
                 padding: 40px 20px;
             }
         }
@@ -169,12 +238,16 @@
 
 <div class="container">
     <header>
-        <h1>João Pedro Gonçalves </h1>
-        <div class="subtitle">Desenvolvedor Front-End</div>
-        <p style="color: var(--text-secondary); max-width: 600px;">
-            Criando experiências digitais com precisão, clareza e foco em performance. 
-            Especialista em transformar designs complexos em interfaces funcionais.
-        </p>
+        <img src="potter.jpg" alt="João Pedro Gonçalves" class="profile-photo">
+        
+        <div class="header-content">
+            <h1>João Pedro Gonçalves</h1>
+            <div class="subtitle">Desenvolvedor Front-End</div>
+            <p style="color: var(--text-secondary); max-width: 600px; margin-top: 15px;">
+                Criando experiências digitais com precisão, clareza e foco em performance. 
+                Especialista em transformar designs complexos em interfaces funcionais.
+            </p>
+        </div>
     </header>
 
     <main>
@@ -182,11 +255,11 @@
 
         <div class="project-card">
             <div class="project-image-real">
-                <img src="potter-sounds-projeto.jpg" alt="Print da tela de login Potter Sounds">
+                <img src="nails-maione.jpg" alt="Projeto Nails Maione">
             </div>
             <div class="project-info">
-                <h3>Potter Sounds - Login Screen</h3>
-                <p>Interface de autenticação moderna inspirada no Spotify, utilizando Glassmorphism e validação dinâmica de credenciais com JavaScript.</p>
+                <h3>Nails Maione - Agendamento</h3>
+                <p>O site Nails Maione é uma landing page institucional focada no segmento de estética e beleza, desenvolvida com HTML5 e CSS3 para oferecer uma vitrine digital sofisticada e totalmente responsiva. O projeto prioriza uma interface "Clean UI" e uma experiência de usuário intuitiva, permitindo a exibição elegante do portfólio de serviços e facilitando o agendamento direto via integração com WhatsApp.</p>
                 
                 <div class="tech-stack">
                     <div class="tech-badge">
@@ -201,23 +274,18 @@
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
                         JS
                     </div>
-                    <div class="tech-badge">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="UI">
-                        UI DESIGN
-                    </div>
                 </div>
-
-                <a href="https://github.com/potter1v4/pottersounds" class="btn-github">VER REPOSITÓRIO GITHUB</a>
+                <a href="https://github.com/potter1v4/nailsmaione" class="btn-github">VER REPOSITÓRIO GITHUB</a>
             </div>
         </div>
 
         <div class="project-card">
             <div class="project-image-real">
-                <img src="site-vasco.jpg" alt="Landing Page Próximos Jogos do Vasco">
+                <img src="ricardo-alemao.jpg" alt="Projeto Ricardo Alemão">
             </div>
             <div class="project-info">
-                <h3>Vasco da Gama - Próximos Jogos</h3>
-                <p>Landing page dinâmica e responsiva que exibe o calendário de jogos, desenvolvida com foco em performance e experiência do usuário (UX/UI).</p>
+                <h3>Ricardo Alemão - Portfólio</h3>
+                <p>A landing page do Ricardo Alemão é uma plataforma de alta conversão desenvolvida para especialistas em apostas esportivas, utilizando HTML5 e Tailwind CSS para garantir uma navegação ultrarrápida e totalmente responsiva. O projeto apresenta um design "Dark Mode" com estética premium, integrando de forma estratégica seções de autoridade, métricas de assertividade e um funil de vendas direto para grupos gratuitos no Telegram e checkouts exclusivos na Hubla.</p>
                 
                 <div class="tech-stack">
                     <div class="tech-badge">
@@ -233,11 +301,25 @@
                         HTML5
                     </div>
                 </div>
-
-                <a href="https://github.com/potter1v4/potter1v4" class="btn-github">VER REPOSITÓRIO GITHUB</a>
+                <a href="https://github.com/potter1v4/ricardoalemao" class="btn-github">VER REPOSITÓRIO GITHUB</a>
             </div>
         </div>
-        </div>
+
+        <section class="contact-section">
+            <h2 class="section-title" style="margin-bottom: 10px;">Vamos trabalhar juntos?</h2>
+            <p style="color: var(--text-secondary);">Estou disponível para novos projetos e freelances. Entre em contato para conversarmos sobre sua ideia!</p>
+            
+            <div class="contact-buttons">
+                <a href="https://www.linkedin.com/in/joãopedro-frontend/" target="_blank" class="btn-contact btn-linkedin">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+                    LinkedIn
+                </a>
+                <a href="https://wa.me/5521989848977" target="_blank" class="btn-contact btn-whatsapp">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/backbonejs/backbonejs-original.svg" style="filter: brightness(0) invert(1);" alt="WhatsApp">
+                    WhatsApp
+                </a>
+            </div>
+        </section>
 
     </main>
 </div>
