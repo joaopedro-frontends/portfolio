@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Potter | Portfólio Front-End</title>
-   <link rel="icon" type="image/x-icon" href="favicon.ico"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+   <link rel="icon" type="image/x-icon" href="favicon.ico"> 
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-color: #ffffff;
@@ -30,7 +31,7 @@
             padding: 80px 20px;
         }
 
-        /* Cabeçalho com Foto de Perfil */
+        /* Cabeçalho */
         header {
             margin-bottom: 60px;
             border-bottom: 1px solid var(--border-color);
@@ -150,6 +151,13 @@
             margin-bottom: 4px;
         }
 
+        /* Container para os Botões */
+        .project-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
         .btn-github {
             display: inline-block;
             padding: 10px 20px;
@@ -167,7 +175,25 @@
             color: #fff;
         }
 
-        /* Seção Vamos Trabalhar Juntos */
+        .btn-online {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--text-main);
+            border: 1px solid var(--text-main);
+            border-radius: 30px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn-online:hover {
+            background-color: transparent;
+            color: var(--text-main);
+        }
+
+        /* Seção de Contato */
         .contact-section {
             margin-top: 80px;
             padding: 60px 40px;
@@ -208,7 +234,7 @@
         .btn-contact img {
             width: 20px;
             height: 20px;
-            filter: brightness(0) invert(1); /* Deixa os ícones brancos */
+            filter: brightness(0) invert(1);
         }
 
         /* Responsividade */
@@ -224,12 +250,13 @@
             }
             .project-card {
                 flex-direction: column;
+                text-align: center;
             }
             .project-image-real {
                 width: 100%;
             }
-            .contact-section {
-                padding: 40px 20px;
+            .tech-stack, .project-actions {
+                justify-content: center;
             }
         }
     </style>
@@ -239,7 +266,6 @@
 <div class="container">
     <header>
         <img src="potter.jpg" alt="João Pedro Gonçalves" class="profile-photo">
-        
         <div class="header-content">
             <h1>João Pedro Gonçalves</h1>
             <div class="subtitle">Desenvolvedor Front-End</div>
@@ -259,8 +285,7 @@
             </div>
             <div class="project-info">
                 <h3>Nails Maione - Agendamento</h3>
-                <p>O site Nails Maione é uma landing page institucional focada no segmento de estética e beleza, desenvolvida com HTML5 e CSS3 para oferecer uma vitrine digital sofisticada e totalmente responsiva. O projeto prioriza uma interface "Clean UI" e uma experiência de usuário intuitiva, permitindo a exibição elegante do portfólio de serviços e facilitando o agendamento direto via integração com WhatsApp.</p>
-                
+                <p>O site Nails Maione é uma landing page institucional focada no segmento de estética e beleza, desenvolvida com HTML5 e CSS3.</p>
                 <div class="tech-stack">
                     <div class="tech-badge">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
@@ -270,12 +295,11 @@
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
                         CSS3
                     </div>
-                    <div class="tech-badge">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
-                        JS
-                    </div>
                 </div>
-                <a href="https://github.com/potter1v4/nailsmaione" class="btn-github">VER REPOSITÓRIO GITHUB</a>
+                <div class="project-actions">
+                    <a href="https://github.com/potter1v4/nailsmaione" class="btn-github" target="_blank">VER REPOSITÓRIO GITHUB</a>
+                    <a href="https://joaopedro-frontends.github.io/nailsmaione/" class="btn-online" target="_blank">VEJA O SITE ON-LINE</a>
+                </div>
             </div>
         </div>
 
@@ -285,7 +309,31 @@
             </div>
             <div class="project-info">
                 <h3>Ricardo Alemão - Portfólio</h3>
-                <p>A landing page do Ricardo Alemão é uma plataforma de alta conversão desenvolvida para especialistas em apostas esportivas, utilizando HTML5 e Tailwind CSS para garantir uma navegação ultrarrápida e totalmente responsiva. O projeto apresenta um design "Dark Mode" com estética premium, integrando de forma estratégica seções de autoridade, métricas de assertividade e um funil de vendas direto para grupos gratuitos no Telegram e checkouts exclusivos na Hubla.</p>
+                <p>Landing page de alta conversão para especialistas em apostas esportivas, utilizando HTML5 e Tailwind CSS.</p>
+                <div class="tech-stack">
+                    <div class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind">
+                        TAILWIND
+                    </div>
+                    <div class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                        HTML5
+                    </div>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/potter1v4/ricardoalemao" class="btn-github" target="_blank">VER REPOSITÓRIO GITHUB</a>
+                    <a href="https://joaopedro-frontends.github.io/ricardoalemao/" class="btn-online" target="_blank">VEJA O SITE ON-LINE</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image-real">
+                <img src="pardito-tips.jpeg" alt="Projeto Pardito Tips">
+            </div>
+            <div class="project-info">
+                <h3>Pardito Tips - Landing Page</h3>
+                <p>Desenvolvimento de uma landing page profissional para o mercado de apostas esportivas com foco em autoridade e conversão.</p>
                 
                 <div class="tech-stack">
                     <div class="tech-badge">
@@ -296,31 +344,22 @@
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
                         JS (ES6+)
                     </div>
-                    <div class="tech-badge">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
-                        HTML5
-                    </div>
                 </div>
-                <a href="https://github.com/potter1v4/ricardoalemao" class="btn-github">VER REPOSITÓRIO GITHUB</a>
+                
+                <div class="project-actions">
+                    <a href="https://github.com/joaopedro-frontends/pardito" class="btn-github" target="_blank">VER REPOSITÓRIO GITHUB</a>
+                    <a href="https://pardito.com.br" class="btn-online" target="_blank">VEJA O SITE ON-LINE</a>
+                </div>
             </div>
         </div>
 
         <section class="contact-section">
-            <h2 class="section-title" style="margin-bottom: 10px;">Vamos trabalhar juntos?</h2>
-            <p style="color: var(--text-secondary);">Estou disponível para novos projetos e freelances. Entre em contato para conversarmos sobre sua ideia!</p>
-            
+            <h2 class="section-title">Vamos trabalhar juntos?</h2>
             <div class="contact-buttons">
-                <a href="https://www.linkedin.com/in/joãopedro-frontend/" target="_blank" class="btn-contact btn-linkedin">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
-                    LinkedIn
-                </a>
-                <a href="https://wa.me/5521989848977" target="_blank" class="btn-contact btn-whatsapp">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/backbonejs/backbonejs-original.svg" style="filter: brightness(0) invert(1);" alt="WhatsApp">
-                    WhatsApp
-                </a>
+                <a href="https://www.linkedin.com/in/joãopedro-frontend/" target="_blank" class="btn-contact btn-linkedin">LinkedIn</a>
+                <a href="https://wa.me/5521989848977" target="_blank" class="btn-contact btn-whatsapp">WhatsApp</a>
             </div>
         </section>
-
     </main>
 </div>
 
